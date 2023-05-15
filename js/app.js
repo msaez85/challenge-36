@@ -70,7 +70,7 @@ class agenda {
   }
 }
 
-let newAgenda = new agenda(15);
+let newAgenda = new agenda();
 
 const labelNombre = document.getElementById('nombre');
 const labelNumero = document.getElementById('numero');
@@ -81,6 +81,7 @@ const btnAgregar = document.getElementById('agregarContacto');
 const btnMostrar = document.getElementById('mostrarContacto');
 const btnBuscar = document.getElementById('buscarContacto');
 const btnEliminar = document.getElementById('eliminarContacto');
+const btnEspacio = document.getElementById('espacioAgenda');
 
 const miTablaEstado = document.getElementById("mi-estado");
 
@@ -99,6 +100,12 @@ btnBuscar.addEventListener('click', () => {
 
 btnEliminar.addEventListener('click', () => {
   newAgenda.eliminarContacto(labelElimina.value);
+  document.getElementById('form-admin').reset();
+}
+)
+
+btnEspacio.addEventListener('click', () => {
+  newAgenda.huecosLibres();
   document.getElementById('form-admin').reset();
 }
 )
