@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>challenge 36</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <div class="superior">
+        <div class="nuevo-contacto">
+            <h1>Nuevo contacto:</h1>
+            <form id="form-contacto">
+                <label for="nombre">Nombre del contacto:</label>
+                <input type="text" id="nombre" name="nombre"><br>
+
+                <label for="numero">Numero del contacto:</label>
+                <input type="text" id="numero" name="numero"><br>
+
+                <button type="button" id="agregarContacto">Agregar contacto a su Agenda</button>
+            </form>
+            <button type="button" id="mostrarContacto">Mostrar mi Agenda</button>
+        </div>
+        <div class="administracion-contacto">
+            <h1>Administracion de contactos:</h1>
+            <form id="form-admin">
+                <label for="busca">Nombre del contacto que busca:</label>
+                <input type="text" id="busca" name="busca"><br>
+                <button type="button" id="buscarContacto">Buscar contacto</button>
+
+                <label for="elimina">Nombre del contacto a eliminar:</label>
+                <input type="text" id="elimina" name="elimina"><br>
+                <button type="button" id="eliminarContacto">Eliminar contacto</button>
+            </form>
+        </div>
+    </div>
+    <div class="inferior">
+        <table id="mi-estado">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Numero</th>
+                </tr>
+            </thead>
+            <tbody id="estadoBody">
+            </tbody>
+        </table>
+
+    </div>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
